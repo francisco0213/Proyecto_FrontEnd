@@ -1,0 +1,277 @@
+@import "./colors.css";
+@font-face{
+    font-family: "Parisienne";
+    src: url("../fonts/Parisienne-Regular.ttf");
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container{
+    border: 3px black;
+}
+
+.header-container ul{   
+    display: flex;
+    align-items: center;
+    padding: 0px ;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header-container ul li a{
+    font-size: 25px;
+    color: black;
+    border-left: 2px solid var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-container ul li a:hover{
+    color: yellow;
+    background-color: var(--primary-color);
+    
+}
+
+.header-container ul li button{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    background-color:green;
+    color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.header-container ul li button:hover{
+    color: yellow;
+    background-color:rgb(21, 80, 21);
+}
+
+.Marco-principal{
+    display: flex;
+}
+
+.Marco-principal div{
+    width: 95%;
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.Marco-principal div h1{
+    font-family: "Parisienne", Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+    padding: 0px;
+}
+
+.Marco-principal div h2{
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Marco-principal div button{
+    width: 100%;
+    font-size: 30px;
+    padding: 5px;
+    background-color:white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.Marco-principal form{
+    width: 95%;
+    text-align: left;
+    padding: 15px;
+    font-size: 20px;
+}
+
+
+.botones-proyectos-contacto ul{
+    display: flex;
+    align-items: center;
+    padding: 2px ;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.botones-proyectos-contacto ul li button{
+
+    background-color:green;
+    color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.botones-proyectos-contacto ul li button:hover{
+
+    color: yellow;
+    background-color:rgb(21, 80, 21);
+}
+
+
+
+.botones-proyectos-contacto ul li a{
+border-bottom: none;
+}
+
+.contenid-aux h1{
+    font-size: 40px;
+    color: black;
+    border-left: 2px solid var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenid-aux button{
+    width: 100%;
+    font-size: 20px;
+    font-family: "Parisienne", Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color:white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Columnas-contenido     {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+
+.Columnas-contenido h3{
+    text-decoration: underline;    
+}
+
+.Columnas-contenido p{
+    padding: 5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.Columnas-contenido ul{
+    padding: 5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    list-style: inside;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+  }
+
+  .botones-redes-sociales ul{
+    display: flex;
+    align-items: center;
+    padding: 0px ;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.Contactarme{
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+.Contactarme-Izquierda{
+width: 50%;
+/*flex: 1;*/
+padding: 5%;
+/*flex-direction: column;*/
+}
+
+.HombreCorriendo{
+    flex: 1;
+    /*padding: 5%;*/
+    justify-content: center;
+    display: flex;
+    /*align-items: center;*/
+}
+
+.Contactarme-Izquierda input[type=text], select, textarea{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+ 
+  .Contactarme-Izquierda label {
+    padding: 6px 6px 6px 0;
+    display: inline-block;
+  }
+  
+  
+  .Contactarme-Izquierda input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+ 
+  .container {
+  
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+
+  .BotonEnviar{
+    font-size:large;
+    padding: 10px;
+    width: 100%;
+    margin-top: 0;
+    background-color: #4CAF50;
+    box-shadow: 0 5px #999;
+  }
+
+  input[type="submit"].BotonEnviar:hover{
+    color: yellow;
+    border: 1px solid black;
+}
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other 
+  @media screen and (max-width: 200px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }*/

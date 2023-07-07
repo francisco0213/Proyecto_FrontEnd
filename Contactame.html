@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank Developments</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav class="header-container">
+            <ul>
+                <li><img src="img/Logo Frank Development2.png" alt="Logo Francisco" width="120px"></li>
+                <li><a href="HojaVida.html">Algo Sobre Mi...</a></li>
+                <li><a href="Proyectos.html">Proyectos...</a></li>
+                <li><a href="Hobbies.html">Hobbies...</a></li>
+                <li><a href="Contactame.html">Contactarme...</a></li>
+                <li><a href="index.html"><button>&nbsp;&nbsp;&nbsp;Inicio&nbsp;&nbsp;&nbsp;</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <div class="Contactarme">
+        <div class="Contactarme-Izquierda">
+            <div><h1>Contactame</h1></div>
+            <div><h2>Si estas interesado en mis servicios o en mis hobbies por favor diligencia el siguiente formulario:</h2></div>
+
+            <div class="container">
+                <form>
+                  
+                    <label for="fname">Nombres</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Nombre..">
+                      <label for="lname">Apellidos</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Apellidos..">
+                      <label for="country">Nacionalidad</label>
+                      <select id="country" name="country">
+                        <option value="colombia">Colombia</option>
+                        <option value="peru">Peru</option>
+                        <option value="brasil">Brasil</option>
+                      </select>
+                      <label for="subject">Comentarios</label>
+                      <textarea id="subject" name="subject" placeholder="Comentario.." style="height:200px"></textarea>
+                    <input id="send_data" class="BotonEnviar" value="Enviar" type="submit"> 
+                </form>
+              </div>
+              <br>
+              <br>
+              <div>
+                <nav class="botones-redes-sociales">
+                    <ul>
+                        <li><a href="https://www.facebook.com"><img src="img/logo facebook.png" alt="Logo facebook" width="40px"></a></li>
+                        <li><a href="https://www.linkedin.com"><img src="img/likedin logo.png" alt="Logo likedin" width="40px"></a></li>
+                        <li><a href="https://www.instagram.com"><img src="img/instagram-logo.jpg" alt="Logo Instagram" width="40px"></a></li>
+                        <li><a href="mailto:francisco_fonseca2002@yahoo.com"><img src="img/logo correo.png" alt="Logo correo" width="40px"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="HombreCorriendo">
+            <video src="videos/HombreCorriendo.mp4" width="90%" controls loop autoplay>MP4 no soportado</video>
+        </div>
+    </div>
+    <script>
+        const send_button = document.getElementById
+            ("send_data");
+  
+        send_button.addEventListener('click', () => {
+            var data = new FormData();
+data.append("Nombres", document.getElementById("fname").value);
+data.append("Apellidos", document.getElementById("lname").value);
+data.append("Nacionalidad", document.getElementById("country").value);
+data.append("Comentarios", document.getElementById("subject").value);
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http://127.0.0.1:8000/api/add-contactos");
+
+xhr.send(data);
+    
+        });
+    </script>
+</body>
+</html>
